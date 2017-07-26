@@ -2,7 +2,7 @@
 // Copyright (C) 2014, University of Southern California and University of Cambridge,
 // all rights reserved.
 //
-// THIS SOFTWARE IS PROVIDED ìAS ISî AND ANY EXPRESS OR IMPLIED WARRANTIES,
+// THIS SOFTWARE IS PROVIDED ‚ÄúAS IS‚Äù AND ANY EXPRESS OR IMPLIED WARRANTIES,
 // INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
 // AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
 // THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
@@ -15,13 +15,13 @@
 // POSSIBILITY OF SUCH DAMAGE.
 //
 // Notwithstanding the license granted herein, Licensee acknowledges that certain components
-// of the Software may be covered by so-called ìopen sourceî software licenses (ìOpen Source
-// Componentsî), which means any software licenses approved as open source licenses by the
+// of the Software may be covered by so-called ‚Äúopen source‚Äù software licenses (‚ÄúOpen Source
+// Components‚Äù), which means any software licenses approved as open source licenses by the
 // Open Source Initiative or any substantially similar licenses, including without limitation any
 // license that, as a condition of distribution of the software licensed under such license,
 // requires that the distributor make the software available in source code format. Licensor shall
 // provide a list of Open Source Components for a particular version of the Software upon
-// Licenseeís request. Licensee will comply with the applicable terms of such licenses and to
+// Licensee‚Äôs request. Licensee will comply with the applicable terms of such licenses and to
 // the extent required by the licenses covering Open Source Components, the terms of such
 // licenses will apply in lieu of the terms of this Agreement. To the extent the terms of the
 // licenses applicable to Open Source Components prohibit any of the restrictions in this
@@ -439,8 +439,8 @@ int main (int argc, char **argv)
 
 				if(visualise && success)
 				{
-					imshow("colour", display_image);
-					cv::waitKey(1);
+					//imshow("colour", display_image);
+					//cv::waitKey(1);
 				}
 
 				// Saving the display images (in an OS independent manner)
