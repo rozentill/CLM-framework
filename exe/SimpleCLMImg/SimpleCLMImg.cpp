@@ -216,13 +216,13 @@ void create_display_image(const Mat& orig, Mat& display_image, CLMTracker::CLM& 
 	double width = max_x - min_x;
 	double height = max_y - min_y;
 
-	int minCropX = max((int)(min_x-width/3.0),0);
-	int minCropY = max((int)(min_y-height/3.0),0);
+	int minCropX = max((int)(min_x-width*5/12.0),0);
+	int minCropY = max((int)(min_y-height*5.0/8.0),0);
 
-	int widthCrop = min((int)(width*5.0/3.0), display_image.cols - minCropX - 1);
-	int heightCrop = min((int)(height*5.0/3.0), display_image.rows - minCropY - 1);
+	int widthCrop = min((int)(width*11.0/6.0), display_image.cols - minCropX - 1);
+	int heightCrop = min((int)(width*11.0 / 6.0), display_image.rows - minCropY - 1);
 
-	double scaling = 350.0/widthCrop;
+	double scaling = 448.0/widthCrop;
 	
 	// first crop the image
 	display_image = display_image(Rect((int)(minCropX), (int)(minCropY), (int)(widthCrop), (int)(heightCrop)));
@@ -255,7 +255,7 @@ void create_display_image(const Mat& orig, Mat& display_image, CLMTracker::CLM& 
 
 	}
 
-	CLMTracker::Draw(display_image, clm_model);
+	//CLMTracker::Draw(display_image, clm_model);
 						
 }
 
@@ -460,7 +460,7 @@ int main (int argc, char **argv)
 						boost::filesystem::path dir = out_feat_path.parent_path();
 						boost::filesystem::path fname = out_feat_path.filename().replace_extension("");
 						boost::filesystem::path ext = out_feat_path.extension();
-						outimage = dir.string() + preferredSlash + fname.string() + string(name) + ext.string();
+						outimage = dir.string() + preferredSlash + fname.string() + ext.string();
 						create_directory_from_file(outimage);
 						imwrite(outimage, display_image);	
 						
